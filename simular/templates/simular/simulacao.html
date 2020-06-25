@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Simulação de Empréstimo: Compare</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </style>
+
+    <style>
+            @charset "UTF-8";
+        .container {
+            padding-right: 1em;
+            padding-left: 1em;
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 60em;
+            width: 100%
+        }
+        /* hero-secondary */
+        
+        .hero-secondary {
+            padding-top: 4.5rem;
+            padding-bottom: 7.0625rem;
+            margin-bottom: 2rem;
+            background-color: indigo;
+            background-repeat: no-repeat;
+            color: seashell
+        }
+        
+        .hero-secondary__title {
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 2.5rem;
+            color: inherit;
+            margin-bottom: 1rem;
+            max-width: 63.5rem
+        }
+        
+        @media (min-width:48em) {
+            .hero-secondary {
+                padding-top: 7.6875rem;
+                padding-bottom: 13.3125rem
+            }
+            .hero-secondary__title {
+                font-size: 3.5rem;
+                line-height: 4rem;
+                margin-bottom: 1.5rem
+            }
+        }
+        
+        .hero-secondary__description {
+            /* line-height: 2rem;
+            font-weight: 400;
+            margin-bottom: 3rem */
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 2.5rem;
+            color: khaki;
+            margin-bottom: 1rem;
+            max-width: 63.5rem
+        }
+        
+        .hero-secondary--3 .hero-secondary__description,
+        .hero-secondary--3 .hero-secondary__title {
+            text-align: center
+        }
+        
+        .hero-secondary--3 {
+            padding-bottom: 5.5rem;
+            /* margin-bottom: 47.5rem */
+        }
+        
+        .hero-secondary--3 .hero-secondary__description,
+        .hero-secondary--3 .hero-secondary__title {
+            max-width: 63.5rem;
+            margin-left: auto;
+            margin-right: auto
+        }
+        
+        .hero-secondary--3 .hero-secondary__infos {
+            margin-left: 0;
+            margin-right: 0
+        }
+        
+        .hero-secondary--3 .hero-secondary__infos .cards-overflow {
+            margin-left: 0
+        }
+        
+        .hero-secondary--3 .hero-secondary__infos .cards-overflow__scroll {
+            position: absolute;
+            width: 100%;
+            padding-left: 0;
+            display: block;
+            overflow: visible
+        }
+        
+        .hero-secondary--3 .card {
+            margin-left: 0;
+            margin-right: 0;
+            max-width: inherit
+        }
+        
+        .hero-secondary--3 .loan-comparator {
+            padding-top: 0;
+            margin: 0 auto;
+            width: 100%
+        }
+        
+        .hero-secondary--3 .loan-comparator .container {
+            padding: 0
+        }
+        
+        @media (min-width:48em) {
+            .hero-secondary__description {
+                margin-bottom: 1.5rem
+            }
+    </style>
+</head>
+
+<body>
+    <!-- cabeçalho  -->
+    <div class="hero-secondary hero-secondary--3">
+
+        <header>
+            <h1 class="hero-secondary__title"> Empréstimo com cartão de crédito</h1>
+            <p class="hero-secondary__description">Aqui esta sua simulação. Não perca tempo, entre em contato agora!</p>
+        </header>
+
+    </div>
+
+    <!-- Simulação -->
+
+    <div class="container">
+        Valor: {{valor}} </br>
+        Parcelas: {{parcelas}} </br>
+        Valor pagar: {{valorpagar}} </br>
+        Nome: {{nome}} </br>
+        E-mail: {{email}} </br>
+        Telefone: {{telefone}}
+    </div>
+    </br>
+    <div class="container">
+        <input type="button" style="color:floralwhite; background-color: darkgray;" value="Solicite agora">
+    </div>
+</body>
+
+</html>
