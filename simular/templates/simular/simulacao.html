@@ -131,17 +131,20 @@
 
     <!-- Simulação -->
 
-    <div class="container">
+    <div class="container row">
         Valor: {{valor}} </br>
         Parcelas: {{parcelas}} </br>
         Valor pagar: {{valorpagar}} </br>
         Nome: {{nome}} </br>
         E-mail: {{email}} </br>
-        Telefone: {{telefone}}
+        Telefone: {{telefone}} </br>
+        host: {{hostname}} - {{ip}}
     </div>
     </br>
     <div class="container">
-        <input type="button" style="color:floralwhite; background-color: darkgray;" value="Solicite agora">
+        <form target="_blank" action="http://abre.ai/basicemprestwpp">
+            <input style="color:floralwhite; background-color:black;" type="submit" value="Solicite Agora" />
+        </form>
     </div>
 </body>
 

@@ -133,25 +133,28 @@
     <!-- empréstimo -->
 
     <div class="container">
-        <form action="simulacao" method="post">{% csrf_token %}
-            <input type="number" placeholder="qual valor necessita?" name="valor">
-            <select name="parcelas">
+        <form action="simulacao" method="post">{% csrf_token %} Valor: <select name="valor">
+                <option value="500" selected>R$ 500,00</option>
+                <option value="1000">R$ 1.000,00</option>
+                <option value="1500">R$ 1.500,00</option>
+            </select> Parcelas: <select name="parcelas">
                 <option value="1" selected>1X</option>
                 <option value="2">2X</option>
                 <option value="3">3X</option>
             </select>
             </br>
+            Bandeira:
             <input type="radio"> VISA
             <input type="radio"> MASTERCARD
             <input type="radio"> OUTRO
             </br>
             </br>
-            <input type="text" class="telefone form-control" placeholder="Seu nome?" name="nome">
-            <input type="text" class="telefone form-control" placeholder="Seu e-mail?" name="email">
-            <input type="text" class="telefone form-control" placeholder="Seu numero telefone?" name="telefone">
+            <input type="text" placeholder="Seu nome?" name="nome">
+            <input type="text" placeholder="Seu e-mail?" name="email">
+            <input type="text" placeholder="Seu numero telefone?" name="telefone">
             </br>
             </br>
-            <input class="telefone form-control" type="submit" value="Enviar">
+            <input style="color:floralwhite; background-color:black;" type="submit" type="submit" value="Simular">
         </form>
     </div>
 </body>
