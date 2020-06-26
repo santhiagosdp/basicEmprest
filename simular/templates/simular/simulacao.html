@@ -4,25 +4,32 @@
 <head>
     <meta charset="UTF-8" />
     <title>Simulação de Empréstimo: Compare</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     </style>
 
     <style>
             @charset "UTF-8";
-        .container {
+        /* .container {
             padding-right: 1em;
             padding-left: 1em;
             margin-right: auto;
             margin-left: auto;
             max-width: 60em;
             width: 100%
-        }
+        } */
         /* hero-secondary */
         
+        .hero-menu {
+            background-color: black;
+            color: seashell;
+            text-align: right
+        }
+        
         .hero-secondary {
-            padding-top: 4.5rem;
-            padding-bottom: 7.0625rem;
-            margin-bottom: 2rem;
+            /* padding-top: 4.5rem; */
+            /* padding-bottom: 7.0625rem; */
+            /* margin-bottom: 2rem; */
             background-color: indigo;
             background-repeat: no-repeat;
             color: seashell
@@ -34,13 +41,13 @@
             line-height: 2.5rem;
             color: inherit;
             margin-bottom: 1rem;
-            max-width: 63.5rem
+            /* max-width: 63.5rem */
         }
         
         @media (min-width:48em) {
             .hero-secondary {
-                padding-top: 7.6875rem;
-                padding-bottom: 13.3125rem
+                padding-top: 2rem;
+                /* padding-bottom: 2rem */
             }
             .hero-secondary__title {
                 font-size: 3.5rem;
@@ -58,7 +65,7 @@
             line-height: 2.5rem;
             color: khaki;
             margin-bottom: 1rem;
-            max-width: 63.5rem
+            max-width: 70rem
         }
         
         .hero-secondary--3 .hero-secondary__description,
@@ -67,13 +74,13 @@
         }
         
         .hero-secondary--3 {
-            padding-bottom: 5.5rem;
-            /* margin-bottom: 47.5rem */
+            padding-bottom: 2rem;
+            margin-bottom: 2rem
         }
         
         .hero-secondary--3 .hero-secondary__description,
         .hero-secondary--3 .hero-secondary__title {
-            max-width: 63.5rem;
+            max-width: 50rem;
             margin-left: auto;
             margin-right: auto
         }
@@ -106,10 +113,9 @@
             margin: 0 auto;
             width: 100%
         }
-        
-        .hero-secondary--3 .loan-comparator .container {
+        /* .hero-secondary--3 .loan-comparator .container {
             padding: 0
-        }
+        } */
         
         @media (min-width:48em) {
             .hero-secondary__description {
@@ -120,32 +126,38 @@
 
 <body>
     <!-- cabeçalho  -->
-    <div class="hero-secondary hero-secondary--3">
-
+    <div class="hero-menu">
+        <a target="blank" href="http://abre.ai/basicemprestwpp">Solicitar informações Adicionais</a>
+    </div>
+    <div class="hero-secondary hero-secondary--3 ">
         <header>
             <h1 class="hero-secondary__title"> Empréstimo com cartão de crédito</h1>
             <p class="hero-secondary__description">Aqui esta sua simulação. Não perca tempo, entre em contato agora!</p>
         </header>
-
     </div>
-
-    <!-- Simulação -->
-
-    <div class="container row">
-        Valor: {{valor}} </br>
-        Parcelas: {{parcelas}} </br>
-        Valor pagar: {{valorpagar}} </br>
-        Nome: {{nome}} </br>
-        E-mail: {{email}} </br>
-        Telefone: {{telefone}} </br>
-        host: {{hostname}} - {{ip}}
-    </div>
-    </br>
     <div class="container">
-        <form target="_blank" action="http://abre.ai/basicemprestwpp">
-            <input style="color:floralwhite; background-color:black;" type="submit" value="Solicite Agora" />
-        </form>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                <div class="alert alert-warning " role="alert">
+                    <div class="alert alert-success" role="alert">
+                        Valor: {{valor}} </br>
+                        Parcelas: {{parcelas}} </br>
+                        Valor pagar: {{valorpagar}} </br>
+                        Nome: {{nome}} </br>
+                        E-mail: {{email}} </br>
+                        Telefone: {{telefone}} </br>
+
+                    </div>
+                    <div style="text-align: center;">
+                        <form target="_blank" action="http://abre.ai/basicemprestwpp">
+                            <input class="btn btn-dark" style="width: 150px; height: 40px;" type="submit" value="Solicite Agora" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
+<script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js "></script>
 
 </html>

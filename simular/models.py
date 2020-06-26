@@ -12,3 +12,6 @@ class Simulacao(models.Model):
     parcelas = models.IntegerField()
     valorfinal = models.IntegerField()
     data = models.DateTimeField(default=timezone.now)
+    
+class Acesso(models.Model):
+    data = models.DateTimeField(default=timezone.now)

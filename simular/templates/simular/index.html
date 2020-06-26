@@ -10,20 +10,20 @@
 
     <style>
             @charset "UTF-8";
-        .container {
+        /* .container {
             padding-right: 1em;
             padding-left: 1em;
             margin-right: auto;
             margin-left: auto;
             max-width: 60em;
             width: 100%
-        }
+        } */
         /* hero-secondary */
         
         .hero-secondary {
-            padding-top: 4.5rem;
-            padding-bottom: 7.0625rem;
-            margin-bottom: 2rem;
+            /* padding-top: 4.5rem; */
+            /* padding-bottom: 7.0625rem; */
+            /* margin-bottom: 2rem; */
             background-color: indigo;
             background-repeat: no-repeat;
             color: seashell
@@ -35,13 +35,13 @@
             line-height: 2.5rem;
             color: inherit;
             margin-bottom: 1rem;
-            max-width: 63.5rem
+            /* max-width: 63.5rem */
         }
         
         @media (min-width:48em) {
             .hero-secondary {
-                padding-top: 7.6875rem;
-                padding-bottom: 13.3125rem
+                padding-top: 2rem;
+                /* padding-bottom: 2rem */
             }
             .hero-secondary__title {
                 font-size: 3.5rem;
@@ -59,7 +59,7 @@
             line-height: 2.5rem;
             color: khaki;
             margin-bottom: 1rem;
-            max-width: 63.5rem
+            max-width: 70rem
         }
         
         .hero-secondary--3 .hero-secondary__description,
@@ -68,13 +68,13 @@
         }
         
         .hero-secondary--3 {
-            padding-bottom: 5.5rem;
-            /* margin-bottom: 47.5rem */
+            padding-bottom: 2rem;
+            margin-bottom: 2rem
         }
         
         .hero-secondary--3 .hero-secondary__description,
         .hero-secondary--3 .hero-secondary__title {
-            max-width: 63.5rem;
+            max-width: 50rem;
             margin-left: auto;
             margin-right: auto
         }
@@ -107,10 +107,9 @@
             margin: 0 auto;
             width: 100%
         }
-        
-        .hero-secondary--3 .loan-comparator .container {
+        /* .hero-secondary--3 .loan-comparator .container {
             padding: 0
-        }
+        } */
         
         @media (min-width:48em) {
             .hero-secondary__description {
@@ -121,43 +120,81 @@
 
 <body>
     <!-- cabeçalho  -->
-    <div class="hero-secondary hero-secondary--3">
-
+    <div class="hero-secondary hero-secondary--3 ">
         <header>
-            <h1 class="hero-secondary__title"> Simulação de empréstimo com cartão de crédito</h1>
-            <p class="hero-secondary__description">Calcule valores e prazos sem compromisso</p>
+            <h1 class="hero-secondary__title "> Simulação de empréstimo com cartão de crédito</h1>
+            <p class="hero-secondary__description ">Calcule valores e prazos sem compromisso</p>
         </header>
-
     </div>
-
-    <!-- empréstimo -->
-
     <div class="container">
-        <form action="simulacao" method="post">{% csrf_token %} Valor: <select name="valor">
-                <option value="500" selected>R$ 500,00</option>
-                <option value="1000">R$ 1.000,00</option>
-                <option value="1500">R$ 1.500,00</option>
-            </select> Parcelas: <select name="parcelas">
-                <option value="1" selected>1X</option>
-                <option value="2">2X</option>
-                <option value="3">3X</option>
-            </select>
-            </br>
-            Bandeira:
-            <input type="radio"> VISA
-            <input type="radio"> MASTERCARD
-            <input type="radio"> OUTRO
-            </br>
-            </br>
-            <input type="text" placeholder="Seu nome?" name="nome">
-            <input type="text" placeholder="Seu e-mail?" name="email">
-            <input type="text" placeholder="Seu numero telefone?" name="telefone">
-            </br>
-            </br>
-            <input style="color:floralwhite; background-color:black;" type="submit" type="submit" value="Simular">
-        </form>
+
+        <div class="row ">
+            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                TEXTO EXPLICATIVO
+            </div>
+
+            <!-- empréstimo -->
+            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 ">
+                <form action="simulacao " method="post"> {% csrf_token %}
+                    <div class="input-group ">
+                        <div class="input-group-prepend ">
+                            <div style="width:100px " class=" input-group-text ">Valor</div>
+                        </div>
+                        <select name="valor" class="form-control ">
+                            <option class="btn btn-secondary " value="500 " selected>R$ 500,00</option>
+                            <option class="btn btn-secondary " value="1000 ">R$ 1.000,00</option>
+                            <option class="btn btn-secondary " value="1500 ">R$ 1.500,00</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group ">
+                        <div class="input-group-prepend ">
+                            <div style="width:100px " class="input-group-text ">Parcelas</div>
+                        </div>
+                        <select name="parcelas" class="form-control ">
+                            <option class="form-control " value=1 selected>1x no cartão de crédito</option>
+                            <option class="form-control " value=2>2x no cartão de crédito</option>
+                            <option class="form-control " value=3>3x no cartão de crédito</option>
+                        </select>
+                    </div>
+                    <div class="input-group ">
+                        <div class="input-group-prepend ">
+                            <div style="width:100px " class="input-group-text ">Bandeira</div>
+                        </div>
+                        <select name="bandeira" class="form-control ">
+                            <option  value="MASTERCARD " selected>MASTERCARD</option>
+                            <option value="VISA ">VISA</option>
+                            <option value="ELO ">ELO</option>
+                            <option value="OUTRA ">OUTRA</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="input-group ">
+                        <div class="input-group-prepend ">
+                            <div style="width:100px " class="input-group-text ">Nome</div>
+                        </div>
+                        <input type="text" name="nome" class="form-control " placeholder="Digite seu Nome ">
+                    </div>
+                    <div class="input-group ">
+                        <div class="input-group-prepend ">
+                            <div style="width:100px " class="input-group-text ">E-mail</div>
+                        </div>
+                        <input type="email " name="email" class="form-control " placeholder="Digite seu E-mail ">
+                    </div>
+                    <div class="input-group ">
+                        <div class="input-group-prepend ">
+                            <div style="width:100px " class="input-group-text ">Telefone</div>
+                        </div>
+                        <input type="text " name="telefone" class="form-control " placeholder="Digite seu Telefone ">
+                    </div>
+                    <br>
+                    <input class="btn btn-success btn-lg btn-block" type="submit" value="Simular">
+                    </br>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
-<script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
+<script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js "></script>
 
 </html>

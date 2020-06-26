@@ -9,15 +9,10 @@ def index(request):
     return render(request, 'simular/index.html', {})
 
 
-def simulacao(request):
-    
-    import socket
-    hostname = socket.gethostname()
-    ip = socket.gethostbyname(hostname)
-    
+def simulacao(request):   
     if request.POST:
-        nome = request.POST.get('nome')    
-        telefone = request.POST.get('telefone')    
+        telefone = request.POST.get('telefone')   
+        nome = request.POST.get('nome')
         email = request.POST.get('email')       
         valor = int(request.POST.get('valor')) + 0.01
         valor =  round(valor, 2)
@@ -41,4 +36,7 @@ def simulacao(request):
         create = Simulacao.objects.create(nome=nome,telefone=telefone,email=email,valor=valor,parcelas=parcelas,data=data,valorfinal=valorpagar)
         create.save()
     
-    return render(request, 'simular/simulacao.html', {'ip':ip,'hostname':hostname,'nome':nome,'email':email,'data':data, 'valorpagar':valorpagar, 'telefone': telefone, 'valor':valor, 'parcelas':parcelas})
+    if telefone=="" or nome=="" or email=="" :
+        return render(request, 'simular/index.html', {})
+    
+    return render(request, 'simular/simulacao.html', {'nome':nome,'email':email,'data':data, 'valorpagar':valorpagar, 'telefone': telefone, 'valor':valor, 'parcelas':parcelas})
