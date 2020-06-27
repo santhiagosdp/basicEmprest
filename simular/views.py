@@ -32,6 +32,8 @@ def simulacao(request):
         
         valorpagar = valorpagar+(valorpagar*conveniencia)
         valorpagar = round(valorpagar, 2)
+        
+        valorparcela = round(valorpagar/int(parcelas), 2)
     
         create = Simulacao.objects.create(nome=nome,telefone=telefone,email=email,valor=valor,parcelas=parcelas,data=data,valorfinal=valorpagar)
         create.save()
@@ -39,4 +41,4 @@ def simulacao(request):
     if telefone=="" or nome=="" or email=="" :
         return render(request, 'simular/index.html', {})
     
-    return render(request, 'simular/simulacao.html', {'nome':nome,'email':email,'data':data, 'valorpagar':valorpagar, 'telefone': telefone, 'valor':valor, 'parcelas':parcelas})
+    return render(request, 'simular/simulacao.html', {'valorparcela':valorparcela,'nome':nome,'email':email,'data':data, 'valorpagar':valorpagar, 'telefone': telefone, 'valor':valor, 'parcelas':parcelas})

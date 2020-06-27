@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Simulação de Empréstimo: Compare</title>
+    <title>TSEmprest</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     </style>
 
     <style>
-            @charset "UTF-8";
+        @charset "UTF-8";
         /* .container {
             padding-right: 1em;
             padding-left: 1em;
@@ -27,6 +27,21 @@
             background-color: indigo;
             background-repeat: no-repeat;
             color: seashell
+        }
+        
+        .h2 {
+            color: darkorange;
+            font-weight: 600;
+            letter-spacing: .3px;
+        }
+        
+        @media(max-width:991px) {
+            .h2,
+            h2 {
+                font-size: 22px;
+                line-height: 1.6;
+                margin-bottom: 15px
+            }
         }
         
         .hero-secondary__title {
@@ -115,6 +130,41 @@
             .hero-secondary__description {
                 margin-bottom: 1.5rem
             }
+        }
+        
+        .items-list {
+            color: #747b85;
+            margin-bottom: 24px
+        }
+        
+        .number {
+            background: #d6e0fa;
+            border-radius: 50%;
+            color: #003bde;
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 600;
+            height: 32px;
+            left: 0;
+            line-height: 32px;
+            position: absolute;
+            text-align: center;
+            width: 32px;
+            z-index: 1
+        }
+        
+        .item {
+            line-height: 1.55;
+            padding-left: 48px;
+            position: relative
+        }
+        
+        .item-title {
+            color: #22252d;
+            display: block;
+            font-size: 19px;
+            margin-bottom: 4px
+        }
     </style>
 </head>
 
@@ -127,10 +177,23 @@
         </header>
     </div>
     <div class="container">
-
         <div class="row ">
             <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                TEXTO EXPLICATIVO
+                <h2 class="h2">Como funciona? </h2>
+                <ul class="items-list list-unstyled">
+                    <li class="item">
+                        <span class="number">1</span>
+                        <strong class="item-title">Simule sem compromisso</strong> Faça uma simulação sem compromisso com o valor que você necessita, considerando o limite do seu cartão de crédito.
+                    </li>
+                    <li class="item">
+                        <span class="number">2</span>
+                        <strong class="item-title">Entre em contato pelo WhatsApp</strong> Informe sua conta para crédito e solicite link de pagamento ou endereço para transação presencial.
+                    </li>
+                    <li class="item">
+                        <span class="number">3</span>
+                        <strong class="item-title">Receba o dinheiro na sua conta</strong> Assim que o seu o pagamento for confirmado, você recebe o dinheiro em até 1 dia útil na conta informada.
+                    </li>
+                </ul>
             </div>
 
             <!-- empréstimo -->
